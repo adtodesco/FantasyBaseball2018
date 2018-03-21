@@ -48,7 +48,7 @@ class DraftSheetGenerator:
                 player = line['playerid']
                 # Skipping over pitchers in the Batter stats
                 if player_type == 'Batter' and player in self.stats[season]:
-                    break
+                    continue
                 self.stats[season][player] = {}
                 self.stats[season][player]['type'] = player_type
                 self.stats[season][player]['Age'] = int(line['Age'])
@@ -67,8 +67,10 @@ class DraftSheetGenerator:
         with open(ranking_file) as f:
             reader = csv.DictReader(f)
             for line in reader:
-                if line['Player'] in pid_map:
-                    self.ranks[pid_map[line['Player']]] = line
+                if line['Player'] + ':' + line['Team'] in pid_map:
+                    self.ranks[pid_map[line['Player'] + ':' + line['Team']]] = line
+                else:
+                    print("Cannot find %s:%s in player id map." % (line['Player'], line['Team']))
 
     def __create_average_projection(self):
         average_projection = {}
@@ -148,7 +150,6 @@ class DraftSheetGenerator:
 
     def __create_players(self):
         for player in self.players:
-            # TODO: Add Age (API?)
             if player in self.ranks:
                 self.players[player]['Rank'] = self.ranks[player]['Rank']
                 self.players[player]['Team'] = self.ranks[player]['Team']
@@ -205,6 +206,39 @@ class DraftSheetGenerator:
 
 
 def generate_metadata(p_files):
+    team_name_map = {
+        'Angels': 'LAA',
+        'Astros': 'HOU',
+        'Athletics': 'OAK',
+        'Blue Jays': 'TOR',
+        'Braves': 'ATL',
+        'Brewers': 'MIL',
+        'Cardinals': 'STL',
+        'Cubs': 'CHC',
+        'Diamondbacks': 'ARI',
+        'Dodgers': 'LAD',
+        'Giants': 'SF',
+        'Indians': 'CLE',
+        'Mariners': 'SEA',
+        'Marlins': 'MIA',
+        'Mets': 'NYM',
+        'Nationals': 'WSH',
+        'Orioles': 'BAL',
+        'Padres': 'SD',
+        'Phillies': 'PHI',
+        'Pirates': 'PIT',
+        'Rangers': 'TEX',
+        'Rays': 'TB',
+        'Red Sox': 'BOS',
+        'Reds': 'CIN',
+        'Rockies': 'COL',
+        'Royals': 'KC',
+        'Tigers': 'DET',
+        'Twins': 'MIN',
+        'White Sox': 'CWS',
+        'Yankees': 'NYY',
+        '': ''
+    }
     pid_map = {}
     pid_set = set([])
     st_map = {}
@@ -212,7 +246,7 @@ def generate_metadata(p_files):
         with open(p_file) as p:
             reader = csv.DictReader(p)
             for line in reader:
-                pid_map[line['Name']] = line['playerid']
+                pid_map[line['Name'] + ":" + team_name_map[line['Team']]] = line['playerid']
                 pid_set.add(line['playerid'])
                 for stat in line:
                     if stat in ['-1']:
