@@ -1,6 +1,7 @@
 import csv
 import glob
 import os
+import operator
 
 
 class DraftSheetGenerator:
@@ -14,7 +15,7 @@ class DraftSheetGenerator:
         self.team_size = team_size
         self.projections = {}
         self.stats = {}
-        self.ranks = {}
+        self.rankings = {}
         self.players = {}
         for pid in pids:
             self.players[pid] = {}
@@ -63,12 +64,12 @@ class DraftSheetGenerator:
 
     def read_ranking(self, ranking_file, pid_map):
         ranking = os.path.splitext(os.path.basename(ranking_file))[0]
-        self.ranks[ranking] = {}
+        self.rankings[ranking] = {}
         with open(ranking_file) as f:
             reader = csv.DictReader(f)
             for line in reader:
                 if line['Player'] + ':' + line['Team'] in pid_map:
-                    self.ranks[pid_map[line['Player'] + ':' + line['Team']]] = line
+                    self.rankings[pid_map[line['Player'] + ':' + line['Team']]] = line
                 else:
                     print("Cannot find %s:%s in player id map." % (line['Player'], line['Team']))
 
@@ -150,44 +151,78 @@ class DraftSheetGenerator:
 
     def __create_players(self):
         for player in self.players:
-            if player in self.ranks:
-                self.players[player]['Rank'] = self.ranks[player]['Rank']
-                self.players[player]['Team'] = self.ranks[player]['Team']
-                self.players[player]['Positions'] = self.ranks[player]['Positions'].split(',')
+            player_map = self.players[player]
+            if player in self.rankings:
+                player_map['FantasyPros Ranking'] = self.rankings[player]['Rank']
+                player_map['Team'] = self.rankings[player]['Team']
+                player_map['Positions'] = self.rankings[player]['Positions'].replace(" ", "").split(',')
+
             for projection in self.projections:
-                if player in self.projections[projection]:
-                    self.players[player]['Player'] = self.projections[projection][player]['Name']
-                    self.players[player]['ADP'] = self.projections[projection][player]['ADP']
-                    if self.projections[projection][player]['type'] == 'Batter':
-                        self.players[player][projection] = int(round(self.projections[projection][player]['points']
-                                                                     * self.BATTER_MULTIPLIER))
-                    elif 'Positions' in self.players[player] and 'SP' in self.players[player]['Positions']:
-                        self.players[player][projection] = int(round(self.projections[projection][player]['points']
-                                                                     * self.STARTER_MULTIPLIER))
+                projection_map = self.projections[projection]
+                if player in projection_map:
+                    player_map['Player'] = projection_map[player]['Name']
+                    player_map['ADP'] = projection_map[player]['ADP']
+                    if projection_map[player]['type'] == 'Batter':
+                        player_map[projection] = int(round(projection_map[player]['points']
+                                                           * self.BATTER_MULTIPLIER))
+                    elif 'Positions' in player_map and 'SP' in player_map['Positions']:
+                        player_map[projection] = int(round(projection_map[player]['points']
+                                                           * self.STARTER_MULTIPLIER))
                     else:
-                        self.players[player][projection] = int(round(self.projections[projection][player]['points']
-                                                                     * self.RELIEF_MULTIPLIER))
+                        player_map[projection] = int(round(projection_map[player]['points']
+                                                           * self.RELIEF_MULTIPLIER))
+
             for season in self.stats:
                 if player in self.stats[season]:
-                    self.players[player]['Age'] = self.stats[season][player]['Age']
+                    player_map['Age'] = self.stats[season][player]['Age']
                     if self.stats[season][player]['type'] == 'Batter':
-                        self.players[player][season] = int(round(self.stats[season][player]['points']
-                                                                 * self.BATTER_MULTIPLIER))
-                    elif 'Positions' in self.players[player] and 'SP' in self.players[player]['Positions']:
-                        self.players[player][season] = int(round(self.stats[season][player]['points']
-                                                                 * self.STARTER_MULTIPLIER))
+                        player_map[season] = int(round(self.stats[season][player]['points']
+                                                       * self.BATTER_MULTIPLIER))
+                    elif 'Positions' in player_map and 'SP' in player_map['Positions']:
+                        player_map[season] = int(round(self.stats[season][player]['points']
+                                                       * self.STARTER_MULTIPLIER))
                     else:
-                        self.players[player][season] = int(round(self.stats[season][player]['points']
-                                                                 * self.RELIEF_MULTIPLIER))
-                    # TODO: Add player rank
-                    # TODO: Add position rank
+                        player_map[season] = int(round(self.stats[season][player]['points']
+                                                       * self.RELIEF_MULTIPLIER))
+
+    def __calculate_position_ranks(self):
+        position_ranks = {}
+        for player in self.players:
+            if 'Positions' not in self.players[player]:
+                continue
+            position = self.players[player]['Positions'][0]
+            if position in ['LF', 'CF', 'RF']:
+                position = 'OF'
+            if position == 'P':
+                position = 'SP'
+            if position not in position_ranks:
+                position_ranks[position] = {}
+            for projection in self.projections:
+                if projection not in self.players[player]:
+                    continue
+                if projection not in position_ranks[position]:
+                    position_ranks[position][projection] = {}
+                position_ranks[position][projection][player] = self.players[player][projection]
+            for season in self.stats:
+                if season not in self.players[player]:
+                    continue
+                if season not in position_ranks[position]:
+                    position_ranks[position][season] = {}
+                position_ranks[position][season][player] = self.players[player][season]
+
+        for position in position_ranks:
+            for item in position_ranks[position]:
+                ranked_order = sorted(position_ranks[position][item].items(), reverse=True,
+                                      key=operator.itemgetter(1))
+                for index in range(len(ranked_order)):
+                    self.players[ranked_order[index][0]][item + " Position Rank"] = position + str(index + 1)
 
     def __write_draft_sheet(self, ds_file):
         with open(ds_file, 'w') as d:
             writer = csv.writer(d)
-            columns = ['Player', 'Team', 'Positions', 'Age', 'ZiPS', 'ZiPS_rank', 'Fans', 'Fans_rank', 'Streamer',
-                       'Streamer_rank', 'DepthCharts', 'DepthCharts_rank', 'Average', 'Average_rank', '2017',
-                       '2017_rank', 'Rank', 'ADP']
+            columns = ['Player', 'Team', 'Positions', 'Age', 'ZiPS', 'ZiPS Position Rank', 'Fans', 'Fans Position Rank',
+                       'Streamer', 'Streamer Position Rank', 'DepthCharts', 'DepthCharts Position Rank', 'Average',
+                       'Average Position Rank', '2017', '2017 Position Rank', 'FantasyPros Ranking', 'ADP']
             writer.writerow(columns)
             for player in self.players:
                 row = []
@@ -202,6 +237,7 @@ class DraftSheetGenerator:
         self.__create_average_projection()
         self.__calculate_points()
         self.__create_players()
+        self.__calculate_position_ranks()
         self.__write_draft_sheet(draft_sheet_file)
 
 
@@ -263,7 +299,7 @@ def generate_metadata(p_files):
 if __name__ == '__main__':
     projection_files = "./Projections/*.csv"
     stat_files = "./Stats/*.csv"
-    rank_file = "./Rankings/FantasyPros.csv"
+    ranking_file = "./Rankings/FantasyPros.csv"
 
     player_id_map, player_id_set, st_map = generate_metadata(glob.iglob(projection_files))
     draft_sheet_generator = DraftSheetGenerator(player_id_set, st_map)
@@ -271,5 +307,5 @@ if __name__ == '__main__':
         draft_sheet_generator.read_projection(proj_file)
     for st_file in glob.iglob(stat_files):
         draft_sheet_generator.read_stat(st_file)
-    draft_sheet_generator.read_ranking(rank_file, player_id_map)
+    draft_sheet_generator.read_ranking(ranking_file, player_id_map)
     draft_sheet_generator.generate_draft_sheet("./DraftSheet.csv")
