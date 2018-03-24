@@ -106,7 +106,8 @@ class DraftSheetGenerator:
                     points += self.projections[projection][player]['R']
                     points += self.projections[projection][player]['RBI']
                     points += self.projections[projection][player]['BB']
-                    points += self.projections[projection][player]['HBP']
+                    if 'HBP' in self.projections[projection][player]:
+                        points += self.projections[projection][player]['HBP']
                     points += self.projections[projection][player]['SO'] * -1
                     points += self.projections[projection][player]['SB'] * 2
                     points += self.projections[projection][player]['CS'] * -1
@@ -132,7 +133,8 @@ class DraftSheetGenerator:
                     points += self.stats[season][player]['R']
                     points += self.stats[season][player]['RBI']
                     points += self.stats[season][player]['BB']
-                    points += self.stats[season][player]['HBP']
+                    if 'HBP' in self.stats[season][player]:
+                        points += self.stats[season][player]['HBP']
                     points += self.stats[season][player]['SO'] * -1
                     points += self.stats[season][player]['SB'] * 2
                     points += self.stats[season][player]['CS'] * -1
@@ -155,7 +157,9 @@ class DraftSheetGenerator:
             if player in self.rankings:
                 player_map['FantasyPros Ranking'] = self.rankings[player]['Rank']
                 player_map['Team'] = self.rankings[player]['Team']
-                player_map['Positions'] = self.rankings[player]['Positions'].replace(" ", "").split(',')
+                player_map['Positions'] = list(set(self.rankings[player]['Positions'].replace(" ", "")
+                                                   .replace('LF', 'OF').replace('CF', 'OF').replace('RF', 'OF')
+                                                   .split(',')))
 
             for projection in self.projections:
                 projection_map = self.projections[projection]
@@ -174,7 +178,7 @@ class DraftSheetGenerator:
 
             for season in self.stats:
                 if player in self.stats[season]:
-                    player_map['Age'] = self.stats[season][player]['Age']
+                    player_map['Age'] = self.stats[season][player]['Age'] + 1
                     if self.stats[season][player]['type'] == 'Batter':
                         player_map[season] = int(round(self.stats[season][player]['points']
                                                        * self.BATTER_MULTIPLIER))

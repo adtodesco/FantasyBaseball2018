@@ -100,7 +100,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 99,Trevor Story,COL,SS,66,218,109.9,35.6,105,6
 100,Ender Inciarte,ATL,CF,67,154,110.5,20.3,127,27
 101,David Price,BOS,SP,77,194,104.8,24.8,98,-3
-102,Kenneth Giles,HOU,RP,71,182,110.7,26.4,90,-12
+102,Ken Giles,HOU,RP,71,182,110.7,26.4,90,-12
 103,Adam Jones,BAL,CF,72,189,112.1,21.5,129,26
 104,Jon Lester,CHC,SP,89,154,112.5,17.3,97,-7
 105,Mike Moustakas,KC,3B,69,192,113.3,28.6,122,17
@@ -140,7 +140,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 139,Luke Weaver,STL,SP,89,262,142.9,32.6,119,-20
 140,Ronald Acuna,ATL,CF ,65,200,139,34.5,126,-14
 141,Sean Doolittle,WSH,RP,98,250,144.4,33.4,114,-27
-142,Greg Bird,NYY,1B,97,241,145.6,34.2,156,14
+142,Gregory Bird,NYY,1B,97,241,145.6,34.2,156,14
 143,Salvador Perez,KC,C,64,310,148.8,49,104,-39
 144,Josh Bell,PIT,1B,100,201,144.6,22.4,175,31
 145,Brett Gardner,NYY,"LF,CF",94,212,151,20.1,168,23
@@ -149,9 +149,9 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 148,Kyle Schwarber,CHC,LF,89,210,151.9,28.3,161,13
 149,Marcus Stroman,TOR,SP,111,290,152.7,34,132,-17
 150,J.T. Realmuto,MIA,C,76,289,152.8,44.5,121,-29
-151,Alexander Colome,TB,RP,106,198,153.8,22.4,130,-21
+151,Alex Colome,TB,RP,106,198,153.8,22.4,130,-21
 152,Kevin Kiermaier,TB,CF,110,239,154.3,24.6,174,22
-153,Steven Souza,ARI,RF,76,248,155,31.1,169,16
+153,Steven Souza Jr.,ARI,RF,76,248,155,31.1,169,16
 154,Yoan Moncada,CWS,2B,63,239,154,35.6,145,-9
 155,Odubel Herrera,PHI,CF,88,203,159,24.1,206,51
 156,Manuel Margot,SD,CF,99,260,155.6,35,153,-3
@@ -163,7 +163,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 162,Danny Duffy,KC,SP,101,259,166.4,38.1,162,-
 163,Eugenio Suarez,CIN,3B,86,267,167.2,36.1,200,37
 164,Michael Conforto,NYM,"LF,CF",113,216,167.5,23.2,191,27
-165,Jonathan Gray,COL,SP,110,312,168.5,39,160,-5
+165,Jon Gray,COL,SP,110,312,168.5,39,160,-5
 166,Brandon Morrow,CHC,RP,98,258,171.2,38,157,-9
 167,Paul DeJong,STL,"SS,2B",99,248,170.4,34.2,149,-18
 168,Andrew Miller,CLE,RP,113,242,175,24.9,192,24
@@ -202,7 +202,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 201,Blake Treinen,OAK,RP,125,273,206.3,35.5,185,-16
 202,Wilson Ramos,TB,C,107,381,208.3,59.8,193,-9
 203,Dinelson Lamet,SD,SP,140,295,207.6,41.3,220,17
-204,Jackie Bradley,BOS,CF,153,281,208.4,26.9,247,43
+204,Jackie Bradley Jr.,BOS,CF,153,281,208.4,26.9,247,43
 205,Michael Brantley,CLE,LF,143,295,211.1,33.1,239,34
 206,Josh Reddick,HOU,"RF,LF",125,311,213,39.8,256,50
 207,David Peralta,ARI,"RF,LF",138,328,211.1,31.5,274,67
@@ -221,12 +221,12 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 220,Mark Trumbo,BAL,"RF,DH",162,340,219.3,42.8,251,31
 221,Welington Castillo,CWS,C,131,434,231.2,60.6,208,-13
 222,Todd Frazier,NYM,3B,144,299,223.6,32,237,15
-223,Michael Clevinger,CLE,SP,128,292,219.7,42.9,202,-21
+223,Mike Clevinger,CLE,SP,128,292,219.7,42.9,202,-21
 224,Lance Lynn,MIN,SP,118,283,222.8,32.6,205,-19
 225,Cole Hamels,TEX,SP,154,313,224,38.1,197,-28
 226,Stephen Piscotty,OAK,RF,165,278,223.9,28.2,279,53
 227,Orlando Arcia,MIL,SS,136,290,227.2,39.5,203,-24
-228,Jacob Faria,TB,SP,154,372,234.4,40.2,217,-11
+228,Jake Faria,TB,SP,154,372,234.4,40.2,217,-11
 229,Hanley Ramirez,BOS,DH,123,401,225.1,60.2,327,98
 230,Mike Zunino,SEA,C,130,416,237.4,60.8,181,-49
 231,J.A. Happ,TOR,SP,123,317,232.5,42.8,249,18
@@ -270,13 +270,13 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 269,Josh Harrison,PIT,"2B,3B",144,348,260.6,42.8,289,20
 270,Albert Pujols,LAA,DH,158,322,254,39.8,290,20
 271,Lewis Brinson,MIA,CF ,148,451,263.6,57.7,315,44
-272,Alex Cobb,,SP ,178,377,264,37.9,227,-45
+272,Alex Cobb,BAL,SP ,178,377,264,37.9,227,-45
 273,David Dahl,COL,CF ,198,403,267.8,47.1,243,-30
 274,Yasmani Grandal,LAD,C,171,447,269.6,56.5,235,-39
 275,Jose Martinez,STL,"1B,LF",145,369,267.2,57.5,267,-8
 276,Jake Odorizzi,MIN,SP,174,423,270.4,45.9,262,-14
 277,Amed Rosario,NYM,SS,162,330,267.8,38.3,282,5
-278,Cameron Bedrosian,LAA,RP,189,349,261,46.3,266,-12
+278,Cam Bedrosian,LAA,RP,189,349,261,46.3,266,-12
 279,Austin Barnes,LAD,"C,2B",198,472,286.2,73.8,225,-54
 280,Jorge Polanco,MIN,SS ,188,499,301.4,96.2,271,-9
 281,Jedd Gyorko,STL,3B,129,395,271.5,56.4,421,140
@@ -288,11 +288,11 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 287,Scott Schebler,CIN,RF,211,445,273.2,49.1,309,22
 288,C.J. Cron,TB,1B,147,412,280.5,62.1,452,164
 289,David Robertson,NYY,RP,195,422,279.8,40.2,252,-37
-290,Alexander Claudio,TEX,RP,184,432,285,47.6,263,-27
+290,Alex Claudio,TEX,RP,184,432,285,47.6,263,-27
 291,Chris Devenski,HOU,RP,182,386,284.5,43.6,273,-18
 292,Luiz Gohara,ATL,SP,214,408,289.2,46.4,305,13
 293,Nick Williams,PHI,RF,80,333,282.3,51.9,342,49
-294,Alexander Reyes,STL,SP,211,497,298,58.9,306,12
+294,Alex Reyes,STL,SP,211,497,298,58.9,306,12
 295,Zach Davies,MIL,SP,173,424,294.3,54.3,280,-15
 296,Chad Green,NYY,RP,202,416,280.7,61.7,261,-35
 297,Carlos Rodon,CWS,SP,189,504,298.1,65.3,407,110
@@ -329,7 +329,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 328,Devon Travis,TOR,2B,194,497,332.1,70.2,377,49
 329,Chris Owings,ARI,"SS,2B,RF",225,438,325.3,61.4,286,-43
 330,Joe Mauer,MIN,1B,211,426,311.2,52.8,358,28
-331,Daniel Straily,MIA,SP,201,502,329.4,75.1,382,51
+331,Dan Straily,MIA,SP,201,502,329.4,75.1,382,51
 332,A.J. Ramos,NYM,RP,240,429,303.9,45.3,362,30
 333,Josh Hader,MIL,RP,241,413,308.8,48.8,281,-52
 334,Nate Jones,CWS,RP,215,484,351.6,93.6,323,-11
@@ -338,21 +338,21 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 337,Hyun-Jin Ryu,LAD,SP,224,439,333.5,69.3,417,80
 338,Hunter Pence,SF,RF,232,431,322.1,60,316,-22
 339,Miles Mikolas,STL,SP,257,372,309,35.9,317,-22
-340,Jake Junis,KC,SP,187,458,344.2,70.7,443,103
+340,Jakob Junis,KC,SP,187,458,344.2,70.7,443,103
 341,Jose Pirela,SD,LF,197,458,327,64.5,460,119
 342,Matt Harvey,NYM,SP,220,409,311.8,54.3,298,-44
 343,Kyle Barraclough,MIA,RP,247,419,309.8,41.8,393,50
 344,Melky Cabrera,,"LF,RF ",206,417,326.5,59.9,351,7
 345,James McCann,DET,C,175,480,358,83.9,350,5
 346,Victor Robles,WSH,RF ,238,410,317,47.5,364,18
-347,Bradley Boxberger,ARI,RP,232,450,325.4,63.1,400,53
-348,C.J. Edwards,CHC,RP,238,418,318.6,51.2,354,6
+347,Brad Boxberger,ARI,RP,232,450,325.4,63.1,400,53
+348,Carl Edwards Jr.,CHC,RP,238,418,318.6,51.2,354,6
 349,Brandon Drury,NYY,2B,208,499,361.3,84.8,376,27
 350,Joe Panik,SF,2B,213,496,338.9,81,270,-80
 351,Kevin Pillar,TOR,CF,246,415,307.1,40.8,300,-51
 352,Mike Minor,TEX,"SP,RP",194,455,326.8,68.9,389,37
 353,Matt Shoemaker,LAA,SP,251,481,336.2,63.9,427,74
-354,Mychal Antonio Givens,BAL,RP,233,394,307.6,49.5,404,50
+354,Mychal Givens,BAL,RP,233,394,307.6,49.5,404,50
 355,Tyler Glasnow,PIT,RP,241,478,342.1,73.8,438,83
 356,Leonys Martin,DET,CF,163,448,370.2,82.9,499,143
 357,Francisco Mejia,CLE,DH,204,559,344.1,107.2,353,-4
@@ -373,7 +373,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 372,Yandy Diaz,CLE,3B,207,489,335.8,105.3,550,178
 373,Mikie Mahtook,DET,"CF,RF",257,410,340.8,58.7,423,50
 374,Colin Moran,PIT,1B ,206,421,337.7,60.4,485,111
-375,Vincent Velasquez,PHI,SP,197,472,371.6,71.4,431,56
+375,Vince Velasquez,PHI,SP,197,472,371.6,71.4,431,56
 376,Manny Pina,MIL,C,227,555,396,116.5,391,15
 377,Anthony Swarzak,NYM,RP,252,447,342.4,70.3,470,93
 378,Pedro Strop,CHC,RP,249,439,360.7,78,575,197
@@ -384,7 +384,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 383,Troy Tulowitzki,TOR,SS,268,487,357.7,72.3,345,-38
 384,Jason Heyward,CHC,RF,277,447,328.3,47.1,330,-54
 385,Jeimer Candelario,DET,3B,232,374,321.9,36.5,406,21
-386,Michael Foltynewicz,ATL,SP,239,497,403,73.3,412,26
+386,Mike Foltynewicz,ATL,SP,239,497,403,73.3,412,26
 387,Travis d'Arnaud,NYM,C,245,464,351.4,61.6,320,-67
 388,Teoscar Hernandez,TOR,LF,254,469,356.6,59.3,432,44
 389,Jorge Alfaro,PHI,C,247,503,364.3,70.2,303,-86
@@ -396,7 +396,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 395,Freddy Galvis,SD,SS,253,464,337.3,52.5,454,59
 396,Matt Wieters,WSH,C,266,483,345.5,65.4,357,-39
 397,Clint Frazier,NYY,LF,251,436,347,69.5,529,132
-398,Nicky Delmonico,CWS,IF,236,482,341.8,90.5,497,99
+398,Nick Delmonico,CWS,LF,236,482,341.8,90.5,497,99
 399,Pat Neshek,PHI,RP,246,495,349.3,73.1,331,-68
 400,Lonnie Chisenhall,CLE,RF,264,455,365.8,62.3,476,76
 401,Jhoulys Chacin,MIL,SP,237,457,363.6,72.5,398,-3
@@ -424,7 +424,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 423,Tommy Kahnle,NYY,RP,270,453,383,71.2,338,-85
 424,Jason Hammel,KC,SP,271,496,417.6,63.2,552,128
 425,Brandon Woodruff,MIL,SP,272,545,435.6,87.5,469,44
-426,Raul Adalberto Mondesi,KC,2B,272,441,362.3,57.3,440,14
+426,Raul Mondesi,KC,2B,272,441,362.3,57.3,440,14
 427,Tommy Hunter,PHI,RP,273,556,425.8,100.7,620,193
 428,Kurt Suzuki,ATL,C,273,507,392.7,80.9,328,-100
 429,Dominic Smith,NYM,1B,274,490,403.8,72.8,506,77
@@ -441,7 +441,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 440,Andrew Cashner,BAL,SP,280,466,404.5,73.1,467,27
 441,Tyler Mahle,CIN,SP,281,564,450.5,111.1,437,-4
 442,Reynaldo Lopez,CWS,SP,281,525,373.9,63.7,386,-56
-443,Seung-Hwan Oh,TOR,RP,281,390,322.4,30.1,341,-102
+443,Seung Hwan Oh,TOR,RP,281,390,322.4,30.1,341,-102
 444,Brandon Phillips,,"2B,3B ",282,445,384.3,61.3,312,-132
 445,Tony Watson,SF,RP,283,397,345.3,47.1,355,-90
 446,Justin Wilson,CHC,RP,284,637,464.7,144.2,598,152
@@ -481,7 +481,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 480,Joe Jimenez,DET,RP,313,595,467.3,116.7,473,-7
 481,Ryan Tepera,TOR,RP,314,470,394.5,55.9,644,163
 482,Koda Glover,WSH,RP,315,588,455.3,111.6,641,159
-483,Albert Almora,CHC,CF,315,552,399.1,78.1,466,-17
+483,Albert Almora Jr.,CHC,CF,315,552,399.1,78.1,466,-17
 484,Bryan Shaw,COL,RP,315,481,418,73.4,629,145
 485,Yolmer Sanchez,CWS,"2B,3B",318,612,444.2,94.1,482,-3
 486,Joe Smith,HOU,RP,318,601,444.3,117.5,658,172
@@ -537,11 +537,11 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 536,Howie Kendrick,WSH,LF,367,565,446.7,59.2,558,22
 537,Jose Urena,MIA,"SP,RP",367,557,463.8,84.1,388,-149
 538,Dillon Peters,MIA,SP,368,574,453.3,75.2,590,52
-539,Francisco Rodriguez,WSH,RP ,369,423,396,27,,
+539,Francisco Rodriguez,PHI,RP ,369,423,396,27,,
 540,Sandy Leon,BOS,C,370,602,486,116,605,65
 541,Nathan Eovaldi,TB,SP,370,521,455.7,63.3,546,5
 542,Bruce Maxwell,OAK,C,371,568,511.5,81.5,526,-16
-543,Matthew Strahm,SD,RP,371,544,457.5,86.5,585,42
+543,Matt Strahm,SD,RP,371,544,457.5,86.5,585,42
 544,Junior Guerra,MIL,RP,374,450,419,32.6,758,214
 545,Leury Garcia,CWS,"CF,LF",375,579,446,80.8,556,11
 546,Zack Wheeler,NYM,SP,375,525,455.9,47.2,492,-54
@@ -555,7 +555,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 554,Brandon Nimmo,NYM,LF,382,611,467.7,66.6,481,-73
 555,Jordy Mercer,PIT,SS,382,517,439.8,51.5,520,-35
 556,Tyson Ross,SD,SP ,382,426,404,22,405,-151
-557,Mark Leiter Jr.,PHI,,384,567,489,77.1,606,49
+557,Mark Leiter,PHI,,384,567,489,77.1,606,49
 558,Luis Valbuena,LAA,"3B,1B",386,639,494.7,106.3,511,-47
 559,Seth Lugo,NYM,SP,386,541,459.8,60.8,571,12
 560,Steve Pearce,TOR,LF,387,564,484,73.3,617,57
@@ -579,7 +579,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 578,Trevor Williams,PIT,SP,406,547,466.5,57,465,-113
 579,Adam Conley,MIA,SP,407,513,465.3,43.9,700,121
 580,Harrison Bader,STL,CF,408,561,484.5,76.5,587,7
-581,Chris Carter,OAK,1B ,409,532,477.7,51.2,,
+581,Chris Carter,LAA,1B ,409,532,477.7,51.2,,
 582,Yonny Chirinos,TB, ,411,485,448,37,738,156
 583,Alcides Escobar,KC,SS,412,522,465.6,41.2,444,-139
 584,Tyler Naquin,CLE,CF,412,478,438,28.7,858,274
@@ -601,7 +601,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 600,Rafael Montero,NYM,RP,430,563,496.5,66.5,731,131
 601,Eloy Jimenez,CWS,LF ,431,575,478,54.2,319,-282
 602,Robert Gsellman,NYM,"RP,SP",431,437,434,3,618,16
-603,Joshua Fields,LAD,RP,432,605,497,76.9,741,138
+603,Josh Fields,LAD,RP,432,605,497,76.9,741,138
 604,David Hernandez,CIN,RP ,434,608,500.3,76.8,797,193
 605,Parker Bridwell,LAA,SP,435,570,509,55.9,369,-236
 606,Paul Blackburn,OAK,SP,436,648,536.3,86.9,,
@@ -614,7 +614,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 613,Boog Powell,OAK,CF,441,545,486.8,44.2,635,22
 614,A.J. Cole,WSH,SP,443,591,517,74,456,-158
 615,Chad Pinder,OAK,"SS,RF",444,606,500,64.6,515,-100
-616,Ezequiel Carrera,TOR,"LF,RF ",446,609,527.5,81.5,798,182
+616,Ezequiel Carrera,ATL,"LF,RF ",446,609,527.5,81.5,798,182
 617,Sergio Romo,TB,RP,448,599,523.5,75.5,717,100
 618,Scott Alexander,LAD,RP,450,598,524,74,728,110
 619,Adeiny Hechavarria,TB,SS,451,596,509.7,62.3,518,-101
@@ -624,7 +624,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 623,Andrew Toles,LAD,LF ,457,640,548.5,91.5,530,-93
 624,Jose Leclerc,TEX,RP,461,553,507,46,693,69
 625,Hansel Robles,NYM,RP,462,643,552.5,90.5,803,178
-626,Brandon Moss,OAK,DH ,463,475,469,6,519,-107
+626,Brandon Moss,,DH ,463,475,469,6,519,-107
 627,John Hicks,DET,1B,465,603,534,69,715,88
 628,Brian Anderson,MIA,3B,466,585,512,44.3,557,-71
 629,Sandy Alcantara,MIA, ,467,635,523.3,66.4,594,-35
@@ -635,7 +635,7 @@ Rank,Player,Team,Positions,Best,Worst,Avg,Std Dev,ADP,vs. ADP
 634,Sean Rodriguez,PIT,RF,478,542,510,32,680,46
 635,Jurickson Profar,TEX,LF ,484,644,561.3,65.4,582,-53
 636,Marco Gonzales,SEA,SP,486,594,521,43.5,609,-27
-637,Lucas Sims,ATL,SP,491,645,568,77,671,34
+637,Luke Sims,ATL,SP,491,645,568,77,671,34
 638,Joe Biagini,TOR,SP,491,546,520,22.6,589,-49
 639,Keynan Middleton,LAA,RP,494,610,552,58,648,9
 640,Ty Blach,SF,"SP,RP",496,615,555.5,59.5,425,-215
